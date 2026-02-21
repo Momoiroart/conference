@@ -1,78 +1,81 @@
-# 📚 Conference - Learn Guide
+# Learn Guide
 
-> *Interactive tutorials for everyone - kids and adults alike!*
+> A tutorial website for learning to build with free AI tools.
 
-[![Status](https://img.shields.io/badge/status-planning-yellow?style=flat-square)](.)
-[![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](.)
+## 🌐 Website
 
-## About
+Learn AI at: (deploy to Netlify/Vercel)
 
-Separate guide website for learning how to use free AI tools.
+## 📚 Content
 
-## Two Sections
+### Kids Track (Ages 10-14)
+- **Level 1**: What is AI?
+- **Level 2**: Meet Ollama
+- **Level 3**: Your First Project
+- **Level 4**: Portfolio Tips
 
-### 👶 For Kids (Ages 10-14)
-- Colorful, game-like tutorials
-- Short, fun lessons
-- Visual examples
-- Achievement badges
+### Adults Track (Ages 15+)
+- **Module 1**: AI Fundamentals
+- **Module 2**: Setting Up Your Environment
+- **Module 3**: HTML & CSS Basics
+- **Module 4**: JavaScript for Beginners
+- **Module 5**: Python Fundamentals
+- **Module 6**: Working with APIs
+- **Module 7**: Building Projects
+- **Module 8**: Deployment & Sharing
 
-### 👨‍💼 For Adults (Ages 15+)
-- Step-by-step guides
-- Practical examples
-- No jargon explanations
-- Progress tracking
-
-## Learning Paths
-
-```
-🎯 BEGINNER
-   │
-   ├── What is AI? (5 min)
-   │
-   ├── Install Ollama (10 min)
-   │
-   ├── Try Claude Code (15 min)
-   │
-   └── Build Something! (your choice)
-        │
-        ├── Portfolio
-        ├── Game
-        ├── Chatbot
-        └── Help an Org (Volunteer!)
-```
-
-## Content Levels
-
-| Level | For | Time |
-|-------|-----|------|
-| Level 1 | Complete beginners | 30 min |
-| Level 2 | Ready to install | 1 hour |
-| Level 3 | Want to build | 2-3 hours |
-| Level 4 | Volunteer mode | 5+ hours |
-
-## Tech Stack
+## 🛠️ Tech Stack
 
 - **Astro** - Static site generator
-- **Tailwind** - Styling
-- **Vercel** - Free hosting
+- **Tailwind CSS** - Styling
+- **Netlify/Vercel** - Hosting (free)
 
-## Quick Start
+## 🚀 Development
 
 ```bash
-# Clone repo
-git clone https://github.com/Momoiroart/conference-learn-guide.git
-cd conference-learn-guide
-
-# Install and run
+# Install dependencies
 npm install
+
+# Start dev server
 npm run dev
+
+# Build for production
+npm run build
 ```
 
-## Documentation
+## 📁 Structure
 
-See main [Conference docs](../docs/) for full project plan.
+```
+learn-guide/
+├── src/
+│   ├── layouts/
+│   │   └── Layout.astro
+│   └── pages/
+│       ├── index.astro          # Homepage
+│       ├── adults/
+│       │   └── index.astro      # Adults track
+│       └── kids/
+│           ├── index.astro      # Kids track
+│           ├── level-1-ai-basics.astro
+│           ├── level-2-ollama.astro
+│           ├── level-3-first-project.astro
+│           └── level-4-portfolio.astro
+├── public/
+├── package.json
+└── README.md
+```
 
-## License
+## 🎨 Design
 
-MIT License - See [LICENSE](LICENSE)
+- Dark theme with pink/cyan accents
+- Custom cursor effects
+- Animated backgrounds
+- Responsive design
+
+## 📝 License
+
+MIT
+
+---
+
+Made with ❤️ and AI
