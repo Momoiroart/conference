@@ -591,9 +591,23 @@
         }
 
         // Collision with bullets
-        bullets = bullets.filter(bullet => {
-          if (bullet.x > enemy.x && bullet.x < enemy.x + enemy.width &&
-              bullet.y > enemy.y && bullet.y < enemy.y + enemy.height) {
+        let hit = false;
+        bullets.forEach((bullet, bulletIndex) => {
+          // Check if bullet overlaps with enemy
+          const bulletLeft = bullet.x - bullet.width / 2;
+          const bulletRight = bullet.x + bullet.width / 2;
+          const bulletTop = bullet.y;
+          const bulletBottom = bullet.y + bullet.height;
+          
+          const enemyLeft = enemy.x;
+          const enemyRight = enemy.x + enemy.width;
+          const enemyTop = enemy.y;
+          const enemyBottom = enemy.y + enemy.height;
+          
+          if (bulletRight > enemyLeft && bulletLeft < enemyRight &&
+              bulletBottom > enemyTop && bulletTop < enemyBottom) {
+            hit = true;
+            bullets[bulletIndex] = null; // Mark bullet for removal
             createExplosion(enemy.x + enemy.width / 2, enemy.y + enemy.height / 2, enemy.color);
             score += 10 * level;
             // Level up every 100 points
@@ -601,10 +615,15 @@
               level++;
             }
             updateUI();
-            return false;
           }
-          return true;
         });
+        
+        // Remove hit bullets
+        bullets = bullets.filter(b => b !== null);
+        
+        if (hit) {
+          return false; // Remove this enemy
+        }
 
         // Draw enemy
         ctx.fillStyle = enemy.color;
