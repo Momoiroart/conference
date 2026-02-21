@@ -27,7 +27,7 @@ Connect volunteers with organizations/schools that need low-cost database migrat
 
 ## Documentation
 
-See [PROJECT_PLAN.md](docs/PROJECT_PLAN.md) for full details.
+See [PROJECT_PLAN.md](/PROJECT_PLAN.md) for full details.
 
 ## License
 
